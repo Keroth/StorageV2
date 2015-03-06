@@ -18,9 +18,9 @@ c_url = 'http://ktt-ol.de/i/'
 
 # Filename for the QR code and barcode
 # The filename for the barcode is not allowed to have a suffix because the create function already adds it.
-c_img_c39 = "code39"
-c_img_qr = "qr.png"
-c_img_arrow = "arrow.png"
+c_img_c39 = "Temp/code39"
+c_img_qr = "Temp/qr.png"
+c_img_arrow = "Temp/arrow.png"
 
 # Label size(pt) in mm 210/297
 c_label_width = 595.4069
