@@ -8,8 +8,7 @@ import barcode.base
 from barcode.writer import ImageWriter
 import pyqrcode
 import cairo
-
-from Label import Base32
+import Base32
 
 
 # Constants:
