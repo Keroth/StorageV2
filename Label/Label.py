@@ -8,8 +8,7 @@ import barcode.base
 from barcode.writer import ImageWriter
 import pyqrcode
 import cairo
-
-from Label import Base32
+import Base32
 
 
 # Constants:
@@ -18,8 +17,8 @@ c_url = 'http://ktt-ol.de/i/'
 
 # Filename for the QR code and barcode
 # The filename for the barcode is not allowed to have a suffix because the create function already adds it.
-c_img_c39 = "code39"
-c_img_qr = "qr.png"
+c_img_c39 = "Temp/code39"
+c_img_qr = "Temp/qr.png"
 
 # Label size(pt) in mm 57/32
 c_label_width = 161.6104
