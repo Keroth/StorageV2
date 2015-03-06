@@ -1,5 +1,4 @@
-import Label
-import LabelSmall
+from Label import Label
 
 Label.Label.create_pdf('0500', 100)
 #LabelSmall.Label.create_pdf(3, 7)

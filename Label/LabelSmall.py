@@ -1,13 +1,16 @@
 __author__ = 'keroth'
 
+import subprocess
+
 import barcode
 import barcode.codex
 import barcode.base
 from barcode.writer import ImageWriter
 import pyqrcode
 import cairo
-import subprocess
-import Base32
+
+from Label import Base32
+
 
 # Constants:
 # URL to the inventory page (example: 'http://i.ktt-ol.de/SPACE')
