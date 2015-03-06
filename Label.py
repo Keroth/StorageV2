@@ -6,7 +6,6 @@ import barcode.base
 from barcode.writer import ImageWriter
 import pyqrcode
 import cairo
-import cups
 import subprocess
 import Base32
 
