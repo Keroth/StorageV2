@@ -29,6 +29,9 @@ c_font = 'Rockwell'
 
 # PDF file
 c_pdf_file = "/home/keroth/Schreibtisch/test.pdf"
+
+# write the last code on in a file
+c_code_from_file = False
 # ***************************
 
 
@@ -78,11 +81,21 @@ class Label (object):
         url.png(c_img_qr, scale=8, module_color=[0, 0, 0, 0xff], background=[0, 0, 0, 0])
 
     @staticmethod
-    def create_pdf(code_id='ERROR', times=1):
+    def create_pdf(code_id='', times=1):
 
         # Initialize the PDF file
         surface = cairo.PDFSurface(c_pdf_file, c_label_width, c_label_height)
         context = cairo.Context(surface)
+
+        if code_id == '':
+            with open('test', 'r') as f:
+                last_code = f.read()
+            c_code_from_file = True
+
+            if last_code == '':
+                code_id = '0000'
+            else:
+                code_id = last_code
 
         for i in range(times):
 
@@ -115,7 +128,11 @@ class Label (object):
             context.show_page()
 
         # Print Page
-        #Label.print_label()
+        # Label.print_label()
+
+        if c_code_from_file == True:
+            with open('test', 'w') as f:
+                f.write(code_id)
 
     @staticmethod
     def print_label():

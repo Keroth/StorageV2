@@ -1,4 +1,4 @@
 from Label import Label
 
-Label.Label.create_pdf('051H', 50)
-#LabelSmall.Label.create_pdf(3, 7)
+Label.Label.create_pdf('', 30)
+# LabelSmall.Label.create_pdf(3, 7)
