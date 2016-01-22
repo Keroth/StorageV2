@@ -20,9 +20,9 @@ c_url = 'http://ktt-ol.de/i/'
 c_img_c39 = "Temp/code39"
 c_img_qr = "Temp/qr.png"
 
-# Label size(pt) in mm 57/32
-c_label_width = 161.6104
-c_label_height = 90.7287
+# Label size(pt) in mm 40/30
+c_label_width = 111.386
+c_label_height = 82.0394
 
 # Text font
 c_font = 'Rockwell'
@@ -30,8 +30,6 @@ c_font = 'Rockwell'
 # PDF file
 c_pdf_file = "Temp/test.pdf"
 
-# write the last code on in a file
-c_code_from_file = False
 # ***************************
 
 
@@ -86,6 +84,8 @@ class Label (object):
         # Initialize the PDF file
         surface = cairo.PDFSurface(c_pdf_file, c_label_width, c_label_height)
         context = cairo.Context(surface)
+        # write the last code on in a file
+        c_code_from_file = False
 
         if code_id == '':
             with open('test', 'r') as f:
@@ -107,18 +107,12 @@ class Label (object):
             Label.create_qrcode(code_id)
 
             # Display the barcode
-            draw_image(context, c_img_c39+'.png', 5, 20, 30, 150)
-
-            # write the URL below the barcode
-            context.select_font_face(c_font, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL)
-            context.set_font_size(8)
-            context.move_to(5, 35)
-            context.show_text(c_url + code_id)
+            draw_image(context, c_img_c39+'.png', 5, 20, 30, 100)
 
             # Write the item id in the lower right corner
             context.select_font_face(c_font, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-            context.set_font_size(22)
-            context.move_to(65, 70)
+            context.set_font_size(20)
+            context.move_to(55, 50)
             context.show_text(code_id)
 
             # Display the QR code

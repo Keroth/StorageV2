@@ -19,7 +19,7 @@ c_url = 'http://ktt-ol.de/i/'
 # The filename for the barcode is not allowed to have a suffix because the create function already adds it.
 c_img_c39 = "Temp/code39"
 c_img_qr = "Temp/qr.png"
-c_img_arrow = "Temp/arrow.png"
+c_img_arrow = "arrow.png"
 
 # Label size(pt) in mm 210/297
 c_label_width = 595.4069
@@ -37,7 +37,7 @@ c_padding_top = 25.00
 c_font = 'Rockwell'
 
 # PDF file
-c_pdf_file = "/home/keroth/Schreibtisch/regal.pdf"
+c_pdf_file = "Temp/regal.pdf"
 
 # Storage parameters
 shelf = ['00', '05', '08', '11', '14', '16', '19', '21', '26', '31', '36', '40']

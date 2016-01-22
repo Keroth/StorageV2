@@ -2,16 +2,17 @@ __author__ = 'keroth'
 
 
 import string
-_base32_translate = string.maketrans(
+_base32_translate = str.maketrans(
     '0123456789ABCDEFGHKLMNPQRSTUWXYZIJOV',
     '0123456789ABCDEFGHIJKLMNOPQRSTUV110U'
 )
 
 _base32_alphabet='0123456789ABCDEFGHKLMNPQRSTUWXYZ'
 
+
 def base32encode(number):
     """Converts an integer to a base36 string."""
-    if not isinstance(number, (int, long)):
+    if not isinstance(number, (int, )):
         raise TypeError('number must be an integer')
 
     base32 = ''
